@@ -1,0 +1,18 @@
+#!/bin/bash
+
+FILES= "usr/sbin/accept /usr/sbin/pwck /usr/bin/fakefile /sbin/badblocks /sbin/ypbind
+
+
+echo for file in $FILES ; do
+	if [ ! -e "$FILE" ] then 
+		echo "$FILE does not exist."; echo
+		continue
+	fi
+
+	ls -l $FILE | awk '{ print $9 "          file size " $%}'
+	whatis 'basename $file'
+
+	echo
+done
+
+exit 0
