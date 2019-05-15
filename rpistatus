@@ -1,0 +1,24 @@
+#!/bin/bash
+for i in {01..20}
+do
+ping rpi$i -w 1 > /dev/null
+
+if [ $? -eq 0 ]; then
+echo "RPI$i is up"
+else
+echo "RPI$i is down"
+fi
+done
+
+#for i in {10..20}
+#do
+#ping rpi$i -w 1 > /dev/null
+
+#if [ $? -eq 0 ]; then
+#	echo "RPI$i is up"
+#	else
+#	echo "RPI$i is down"
+#fi
+#done
+
+echo "SCAN COMPLETE"
